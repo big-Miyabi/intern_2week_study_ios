@@ -8,10 +8,14 @@ final class Question1ViewController: UIViewController {
     @IBOutlet weak var clearTextButton: UIButton!
     @IBOutlet weak var textView: UITextView!
     
+    func addFuncToButton(_ button: UIButton!, _ selector: Selector) {
+        button.addTarget(self, action: selector, for: UIControl.Event.touchUpInside)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        addTextButton.addTarget(self, action: #selector(addText(_:)), for: UIControl.Event.touchUpInside)
-        clearTextButton.addTarget(self, action: #selector(clearText(_:)), for: UIControl.Event.touchUpInside)
+        addFuncToButton(addTextButton, #selector(addText(_:)))
+        addFuncToButton(clearTextButton, #selector(clearText(_:)))
         textView.text = ""
         warningLabel.isHidden = true
     }
