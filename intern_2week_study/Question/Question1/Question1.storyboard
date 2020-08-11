@@ -47,6 +47,13 @@
                                 </constraints>
                                 <state key="normal" title="Add"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="文字を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ja-zD-HJp" userLabel="Warning label">
+                                <rect key="frame" x="86" y="276" width="135" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -64,6 +71,7 @@
                         <outlet property="clearTextButton" destination="5pp-4y-HTr" id="pjt-CS-Lp9"/>
                         <outlet property="textField" destination="SAC-3D-GIS" id="kBt-tg-yHt"/>
                         <outlet property="textView" destination="h1I-2B-V7f" id="dkf-fw-Acv"/>
+                        <outlet property="warningLabel" destination="1Ja-zD-HJp" id="VcC-PK-bZW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhm-ii-iwx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
