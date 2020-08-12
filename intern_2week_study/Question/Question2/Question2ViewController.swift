@@ -9,6 +9,7 @@ final class Question2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: "Question2Cell", bundle: nil), forCellReuseIdentifier: "question2Cell")
     }
 }
 
@@ -19,10 +20,10 @@ extension Question2ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel!.text = areaTexts[indexPath.row]
-        let request = ImageRequest(url: URL(string: "https://pbs.twimg.com/profile_images/1151602549/a-sya.jpg")!)
-        Nuke.loadImage(with: request, into: cell.imageView!)
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "question2Cell", for: indexPath) as? Question2Cell {
+            cell.cellDisplay(text: areaTexts[indexPath.row])
+            return cell
+        }
+        return UITableViewCell()
     }
 }
