@@ -14,11 +14,12 @@ final class Question2ViewController: UIViewController {
 extension Question2ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TableViewに表示する行数を指定する
-        return 0
+        return areaTexts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // 仮のセル
-        return UITableViewCell()
+        let cell = UITableViewCell()
+        cell.textLabel!.text = areaTexts[indexPath.row]
+        return cell
     }
 }
