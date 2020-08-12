@@ -1,6 +1,6 @@
 import UIKit
 
-final class Question2ViewController: UIViewController {
+final class Question2ViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,6 +17,7 @@ final class Question2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
         tableView.register(UINib(nibName: "Question2Cell", bundle: nil), forCellReuseIdentifier: "question2Cell")
     }
 }
@@ -28,11 +29,23 @@ extension Question2ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // cellをカスタマイズ
         if let cell = tableView.dequeueReusableCell(withIdentifier: "question2Cell", for: indexPath) as? Question2Cell {
             let url = URL(string: urls[indexPath.row])!
             cell.cellDisplay(text: areaTexts[indexPath.row], url: url)
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // アクションを実装
+        let alertController: UIAlertController =
+            UIAlertController(title: areaTexts[indexPath.row],
+                              message: "＼(^o^)／",
+                              preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
