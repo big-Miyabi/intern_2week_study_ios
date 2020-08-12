@@ -1,3 +1,4 @@
+import Nuke
 import UIKit
 
 final class Question2ViewController: UIViewController {
@@ -20,6 +21,8 @@ extension Question2ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel!.text = areaTexts[indexPath.row]
+        let request = ImageRequest(url: URL(string: "https://pbs.twimg.com/profile_images/1151602549/a-sya.jpg")!)
+        Nuke.loadImage(with: request, into: cell.imageView!)
         return cell
     }
 }
