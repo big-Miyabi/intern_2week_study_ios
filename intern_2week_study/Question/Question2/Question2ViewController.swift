@@ -1,4 +1,3 @@
-import Nuke
 import UIKit
 
 final class Question2ViewController: UIViewController {
@@ -6,6 +5,15 @@ final class Question2ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let areaTexts: [String] = ["茨城県", "栃木県", "群馬県", "埼玉県", "千葉県", "東京都", "神奈川県"]
+    private let urls: [String] = [
+        "https://www.ibarakiguide.jp/wp-content/themes/FromMeToYou/images/ibaraki-activity-map.png",
+        "https://s3-ap-northeast-1.amazonaws.com/tabi-channel/upload_by_admin/tochigi_travel_800.jpg",
+        "https://cdn.mainichi.jp/vol1/2016/10/19/20161019dd0phj000046000p/9.jpg",
+        "https://snaplace.jp/wp-content/uploads/2017/11/soukasenbeisaitama.jpg",
+        "https://stickershop.line-scdn.net/stickershop/v1/product/1917/LINEStorePC/main.png",
+        "https://www.enjoytokyo.jp/img/s_s/l/_26/l/lm_26IMG1.jpg",
+        "https://img.travel.rakuten.co.jp/mytrip/content/ranking/spot-kanagawa/images/china_town.jpg"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +29,8 @@ extension Question2ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "question2Cell", for: indexPath) as? Question2Cell {
-            cell.cellDisplay(text: areaTexts[indexPath.row])
+            let url = URL(string: urls[indexPath.row])!
+            cell.cellDisplay(text: areaTexts[indexPath.row], url: url)
             return cell
         }
         return UITableViewCell()
