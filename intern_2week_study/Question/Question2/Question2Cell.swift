@@ -6,7 +6,7 @@ class Question2Cell: UITableViewCell {
     @IBOutlet weak var areaImageView: UIImageView!
     
     func displayCell(text: String, url: URL) {
-        self.label?.text = text
+        self.label.text = text
         Nuke.loadImage(with: url, into: areaImageView)
     }
 }
