@@ -17,7 +17,6 @@ final class Question2ViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
         tableView.register(
             UINib(nibName: "Question2Cell", bundle: nil),
             forCellReuseIdentifier: "question2Cell"
@@ -37,15 +36,18 @@ extension Question2ViewController: UITableViewDataSource {
             withIdentifier: "question2Cell",
             for: indexPath
         )
-        guard let customCell = cell as? Question2Cell else { return UITableViewCell() }
-        let url = URL(string: urls[indexPath.row])!
+        guard let customCell = cell as? Question2Cell,
+            let url = URL(string: urls[indexPath.row]) else {
+                return UITableViewCell()
+        }
+        
         customCell.displayCell(text: areaTexts[indexPath.row], url: url)
         return customCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // アクションを実装
-        let alertController: UIAlertController = UIAlertController(
+        let alertController = UIAlertController(
             title: areaTexts[indexPath.row],
             message: "＼(^o^)／",
             preferredStyle: .alert
