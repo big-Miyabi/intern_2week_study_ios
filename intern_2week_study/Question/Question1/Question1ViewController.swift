@@ -28,12 +28,12 @@ final class Question1ViewController: UIViewController {
     }
     
     @objc func addText(_ sender: UIButton) {
-        if textField.text == "" {
+        guard let text = textField.text, !text.isEmpty else {
             warningLabel.isHidden = false
             return
         }
         warningLabel.isHidden = true
-        textView.text += "\n" + textField.text!
+        textView.text += "\n" + text
     }
     
     @objc func clearText(_ sender: UIButton) {
