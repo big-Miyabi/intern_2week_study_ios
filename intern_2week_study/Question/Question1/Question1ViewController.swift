@@ -21,7 +21,7 @@ final class Question1ViewController: UIViewController {
     }
     
     @objc func addText(_ sender: UIButton) {
-        if textField.text! == "" {
+        if textField.text == "" {
             warningLabel.isHidden = false
             return
         }
