@@ -67,8 +67,8 @@
                         <viewLayoutGuide key="safeArea" id="tUl-ih-lXm"/>
                     </view>
                     <connections>
-                        <outlet property="buttonToAddText" destination="mcD-4C-Lu1" id="1Oy-fX-5Mt"/>
-                        <outlet property="buttonToClearText" destination="5pp-4y-HTr" id="NZO-cJ-EBg"/>
+                        <outlet property="addButton" destination="mcD-4C-Lu1" id="VXc-Iu-ru6"/>
+                        <outlet property="clearButton" destination="5pp-4y-HTr" id="V6P-Cp-5YG"/>
                         <outlet property="textField" destination="SAC-3D-GIS" id="kBt-tg-yHt"/>
                         <outlet property="textView" destination="h1I-2B-V7f" id="dkf-fw-Acv"/>
                         <outlet property="warningLabel" destination="1Ja-zD-HJp" id="VcC-PK-bZW"/>
