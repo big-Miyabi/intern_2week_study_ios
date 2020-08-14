@@ -24,6 +24,29 @@ final class Question2ViewController: UIViewController, UITableViewDelegate {
     }
 }
 
+extension UIAlertController {
+    class func singleBtnAlertWithTitle(title: String, message: String, completion: (() -> Void)?) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_ action: UIAlertAction!) -> Void in
+            if let completion = completion {
+                completion()
+            }
+        }))
+        return alert
+    }
+    
+    class func doubleBtnAlertWithTitle(title: String, message: String, otherBtnTitle: String, completion: (() -> Void)?) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: otherBtnTitle, style: .default, handler: { (_ action: UIAlertAction!) -> Void in
+            if let completion = completion {
+                completion()
+            }
+        }))
+        return alert
+    }
+}
+
 extension Question2ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TableViewに表示する行数を指定する
@@ -40,13 +63,7 @@ extension Question2ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // アクションを実装
-        let alertController = UIAlertController(
-            title: areaTexts[indexPath.row],
-            message: "＼(^o^)／",
-            preferredStyle: .alert
-        )
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
+        let alert = UIAlertController.singleBtnAlertWithTitle(title: areaTexts[indexPath.row], message: "＼(^o^)／", completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
 }
