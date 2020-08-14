@@ -57,7 +57,7 @@ extension Question2ViewController: UITableViewDataSource {
         // cellをカスタマイズ
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "question2Cell", for: indexPath) as? Question2Cell, let url = URL(string: urls[indexPath.row]) else { return UITableViewCell() }
         
-        cell.displayCell(text: areaTexts[indexPath.row], url: url)
+        cell.applyCell(text: areaTexts[indexPath.row], url: url)
         return cell
     }
     
