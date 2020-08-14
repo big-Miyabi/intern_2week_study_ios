@@ -17,6 +17,8 @@ final class Question2ViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.register(
             UINib(nibName: "Question2Cell", bundle: nil),
             forCellReuseIdentifier: "question2Cell"
