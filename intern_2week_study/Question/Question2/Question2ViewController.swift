@@ -19,10 +19,8 @@ final class Question2ViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(
-            UINib(nibName: "Question2Cell", bundle: nil),
-            forCellReuseIdentifier: "question2Cell"
-        )
+        tableView.register(UINib(nibName: "Question2Cell", bundle: nil),
+                           forCellReuseIdentifier: "question2Cell")
     }
 }
 
@@ -34,17 +32,10 @@ extension Question2ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // cellをカスタマイズ
-        let cell: UITableViewCell = tableView.dequeueReusableCell(
-            withIdentifier: "question2Cell",
-            for: indexPath
-        )
-        guard let customCell = cell as? Question2Cell,
-            let url = URL(string: urls[indexPath.row]) else {
-                return UITableViewCell()
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "question2Cell", for: indexPath) as? Question2Cell, let url = URL(string: urls[indexPath.row]) else { return UITableViewCell() }
         
-        customCell.displayCell(text: areaTexts[indexPath.row], url: url)
-        return customCell
+        cell.displayCell(text: areaTexts[indexPath.row], url: url)
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
