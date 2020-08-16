@@ -5,17 +5,17 @@ final class SearchViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var searchButton: UIButton! {
         didSet {
-            searchButton.addTarget(self, action: #selector(darkenButton(_:)), for: .touchDown)
-            searchButton.addTarget(self, action: #selector(searchButtonTapped(_:)), for: .touchUpInside)
-            searchButton.addTarget(self, action: #selector(searchButtonTapped(_:)), for: .touchUpOutside)
+            searchButton.addTarget(self, action: #selector(darken(_:)), for: .touchDown)
+            searchButton.addTarget(self, action: #selector(lightenAndSearch(_:)), for: .touchUpInside)
+            searchButton.addTarget(self, action: #selector(lightenAndSearch(_:)), for: .touchUpOutside)
         }
     }
     
-    @objc func darkenButton(_ sender: UIButton) {
+    @objc func darken(_ sender: UIButton) {
         searchButton.backgroundColor = UIColor(red: 63 / 255, green: 149 / 255, blue: 0.0, alpha: 1.0)
     }
     
-    @objc func searchButtonTapped(_ sender: UIButton) {
+    @objc func lightenAndSearch(_ sender: UIButton) {
         searchButton.backgroundColor = UIColor(red: 0, green: 201 / 255, blue: 0, alpha: 1.0)
         searchArticles()
     }

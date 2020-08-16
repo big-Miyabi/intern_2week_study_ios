@@ -35,16 +35,13 @@
                                 <state key="normal" title="検索">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
-                                <connections>
-                                    <action selector="searchButtonTapped:" destination="hE7-Bk-rHS" eventType="touchUpInside" id="u2c-cK-r2x"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.99215686274509807" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="EnP-FA-CAh"/>
                     </view>
                     <connections>
-                        <outlet property="searchButton" destination="D3V-0W-iXI" id="tPH-IB-Dgv"/>
+                        <outlet property="searchButton" destination="D3V-0W-iXI" id="bVN-WV-oB3"/>
                         <outlet property="textField" destination="cwo-aH-RDr" id="frT-1v-Aex"/>
                     </connections>
                 </viewController>
