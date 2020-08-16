@@ -81,6 +81,7 @@
 		29B91DEC24E909E80095E27D /* ArticleListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleListCell.xib; sourceTree = "<group>"; };
 		29B91DEE24E915A60095E27D /* ArticleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListCell.swift; sourceTree = "<group>"; };
 		29B91DF424E91E040095E27D /* ArticleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
+		29D0510924E9781000A22B75 /* HigashiOme-Gothic-1.3i.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HigashiOme-Gothic-1.3i.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +275,7 @@
 		08C9DD9224E016E600459724 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				29D0510924E9781000A22B75 /* HigashiOme-Gothic-1.3i.ttf */,
 				08C9DD8E24E0162200459724 /* Search.storyboard */,
 				08C9DD9024E0163E00459724 /* SearchViewController.swift */,
 			);
@@ -592,8 +594,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GRG84YP2QU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -604,7 +607,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "caraquri.Intern-2week-study";
+				PRODUCT_BUNDLE_IDENTIFIER = "caraquri.Intern-2week-study20200817";
 				PRODUCT_NAME = intern_2week_study;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -616,8 +619,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GRG84YP2QU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -628,7 +632,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "caraquri.Intern-2week-study";
+				PRODUCT_BUNDLE_IDENTIFIER = "caraquri.Intern-2week-study20200817";
 				PRODUCT_NAME = intern_2week_study;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

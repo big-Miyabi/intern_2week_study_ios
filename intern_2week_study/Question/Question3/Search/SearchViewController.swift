@@ -11,6 +11,7 @@ final class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchButton.layer.cornerRadius = 20.0
     }
     
     private func searchArticles() {
