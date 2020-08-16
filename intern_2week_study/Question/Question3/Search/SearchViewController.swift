@@ -6,8 +6,8 @@ final class SearchViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton! {
         didSet {
             searchButton.addTarget(self, action: #selector(darkenButton(_:)), for: .touchDown)
-            searchButton.addTarget(self, action: #selector(lightenButton(_:)), for: .touchUpInside)
-            searchButton.addTarget(self, action: #selector(lightenButton(_:)), for: .touchUpOutside)
+            searchButton.addTarget(self, action: #selector(searchButtonTapped(_:)), for: .touchUpInside)
+            searchButton.addTarget(self, action: #selector(searchButtonTapped(_:)), for: .touchUpOutside)
         }
     }
     
@@ -15,11 +15,8 @@ final class SearchViewController: UIViewController {
         searchButton.backgroundColor = UIColor(red: 63 / 255, green: 149 / 255, blue: 0.0, alpha: 1.0)
     }
     
-    @objc func lightenButton(_ sender: UIButton) {
+    @objc func searchButtonTapped(_ sender: UIButton) {
         searchButton.backgroundColor = UIColor(red: 0, green: 201 / 255, blue: 0, alpha: 1.0)
-    }
-    
-    @IBAction func searchButtonTapped(_ sender: UIButton) {
         searchArticles()
     }
     
