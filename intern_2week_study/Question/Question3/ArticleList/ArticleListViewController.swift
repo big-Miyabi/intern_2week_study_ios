@@ -3,18 +3,21 @@ import UIKit
 
 final class ArticleListViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.register(R.nib.articleListCell)
+        }
+    }
     
     private var articles: [Article] = []
+    private struct Const {
+        static let heightForRow: CGFloat = 85.0
+    }
 
-    static func makeInstance(_ articles: [Article]) -> ArticleListViewController {
+    static func makeViewController(_ articles: [Article]) -> ArticleListViewController {
         guard let articleListViewController = R.storyboard.articleList.instantiateInitialViewController() else { return ArticleListViewController() }
         articleListViewController.articles = articles
         return articleListViewController
-    }
-
-    override func viewDidLoad() {
-        tableView.register(R.nib.articleListCell)
     }
 }
 
@@ -37,7 +40,7 @@ extension ArticleListViewController: UITableViewDataSource {
 extension ArticleListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85.0
+        return Const.heightForRow
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
