@@ -22,27 +22,39 @@
                             <constraint firstAttribute="width" secondItem="L8e-CJ-SD0" secondAttribute="height" multiplier="1:1" id="USX-KL-8hP"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmo-rr-mgW">
-                        <rect key="frame" x="83" y="10.5" width="318.5" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpP-al-AGN">
-                        <rect key="frame" x="83" y="53.5" width="318.5" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nef-d4-eu3">
+                        <rect key="frame" x="83" y="10.5" width="318.5" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmo-rr-mgW">
+                                <rect key="frame" x="0.0" y="0.0" width="318.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpP-al-AGN">
+                                <rect key="frame" x="0.0" y="21" width="318.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kpP-al-AGN" firstAttribute="leading" secondItem="nef-d4-eu3" secondAttribute="leading" id="S3a-hj-IcK"/>
+                            <constraint firstItem="nmo-rr-mgW" firstAttribute="leading" secondItem="nef-d4-eu3" secondAttribute="leading" id="SAj-yO-4FY"/>
+                            <constraint firstItem="kpP-al-AGN" firstAttribute="top" secondItem="nmo-rr-mgW" secondAttribute="baseline" constant="5" id="gks-g8-Pos"/>
+                            <constraint firstItem="kpP-al-AGN" firstAttribute="width" secondItem="nef-d4-eu3" secondAttribute="width" id="noc-bO-sbW"/>
+                            <constraint firstItem="nmo-rr-mgW" firstAttribute="width" secondItem="nef-d4-eu3" secondAttribute="width" id="yG8-wW-9Kj"/>
+                            <constraint firstItem="nmo-rr-mgW" firstAttribute="top" secondItem="nef-d4-eu3" secondAttribute="top" id="zxx-Gf-OPL"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="nmo-rr-mgW" firstAttribute="top" secondItem="L8e-CJ-SD0" secondAttribute="top" id="5CD-kI-q4Z"/>
-                    <constraint firstItem="nmo-rr-mgW" firstAttribute="trailing" secondItem="KqL-eG-3dD" secondAttribute="trailing" multiplier="0.97" id="AIy-Gr-zcj"/>
-                    <constraint firstItem="kpP-al-AGN" firstAttribute="width" secondItem="nmo-rr-mgW" secondAttribute="width" id="IB1-Zs-otB"/>
-                    <constraint firstItem="kpP-al-AGN" firstAttribute="bottom" secondItem="L8e-CJ-SD0" secondAttribute="bottom" id="VgD-0H-Ilp"/>
+                    <constraint firstItem="nef-d4-eu3" firstAttribute="trailing" secondItem="KqL-eG-3dD" secondAttribute="trailing" multiplier="0.97" id="HKg-hb-Cm8"/>
+                    <constraint firstItem="nef-d4-eu3" firstAttribute="height" secondItem="L8e-CJ-SD0" secondAttribute="height" id="HoB-08-9Rd"/>
                     <constraint firstItem="L8e-CJ-SD0" firstAttribute="height" secondItem="KqL-eG-3dD" secondAttribute="height" multiplier="0.75" id="Yq5-Bq-VCQ"/>
-                    <constraint firstItem="kpP-al-AGN" firstAttribute="leading" secondItem="nmo-rr-mgW" secondAttribute="leading" id="flX-lO-dLI"/>
-                    <constraint firstItem="nmo-rr-mgW" firstAttribute="width" secondItem="KqL-eG-3dD" secondAttribute="width" multiplier="0.77" id="gx1-RM-Lnr"/>
+                    <constraint firstItem="nef-d4-eu3" firstAttribute="width" secondItem="KqL-eG-3dD" secondAttribute="width" multiplier="0.77" id="cDu-Bt-1hE"/>
+                    <constraint firstItem="nef-d4-eu3" firstAttribute="centerY" secondItem="KqL-eG-3dD" secondAttribute="centerY" id="ce5-69-WRW"/>
                     <constraint firstItem="L8e-CJ-SD0" firstAttribute="centerY" secondItem="KqL-eG-3dD" secondAttribute="centerY" id="m1T-SN-uWk"/>
                     <constraint firstItem="L8e-CJ-SD0" firstAttribute="leading" secondItem="KqL-eG-3dD" secondAttribute="trailing" multiplier="0.03" id="mfh-KH-eyk"/>
                 </constraints>
