@@ -10,6 +10,9 @@ final class ArticleListCell: UITableViewCell {
         titleTextLabel.text = article.title
         descriptionTextLabel.text = "LGTM: " +  String(article.likesCount)
         
+        // article.user?.id
+        // article.createdAt
+        
         guard let urlString = article.user?.profileImageUrl,
             let url = URL(string: urlString) else { return }
         Nuke.loadImage(with: url, into: userImageView)
