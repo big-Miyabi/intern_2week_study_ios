@@ -10,6 +10,9 @@ final class ArticleListViewController: UIViewController {
     }
     
     private var articles: [Article] = []
+    private struct Const {
+        static let heightForRow: CGFloat = 85.0
+    }
 
     static func makeViewController(_ articles: [Article]) -> ArticleListViewController {
         guard let articleListViewController = R.storyboard.articleList.instantiateInitialViewController() else { return ArticleListViewController() }
@@ -37,7 +40,7 @@ extension ArticleListViewController: UITableViewDataSource {
 extension ArticleListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85.0
+        return Const.heightForRow
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
