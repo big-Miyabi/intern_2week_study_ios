@@ -11,7 +11,7 @@ final class ArticleListViewController: UIViewController {
     
     private var articles: [Article] = []
 
-    static func makeInstance(_ articles: [Article]) -> ArticleListViewController {
+    static func makeViewController(_ articles: [Article]) -> ArticleListViewController {
         guard let articleListViewController = R.storyboard.articleList.instantiateInitialViewController() else { return ArticleListViewController() }
         articleListViewController.articles = articles
         return articleListViewController
