@@ -45,7 +45,7 @@
                     <navigationItem key="navigationItem" title="記事検索" id="cAq-1i-AHl"/>
                     <connections>
                         <outlet property="searchButton" destination="3Sd-kK-wLQ" id="bDG-9s-KkM"/>
-                        <outlet property="textField" destination="AVK-cq-1ob" id="jI6-lr-eLP"/>
+                        <outlet property="textField" destination="AVK-cq-1ob" id="tXJ-DO-Lba"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sw5-Xc-n6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

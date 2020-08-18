@@ -11,7 +11,7 @@
         <!--記事一覧-->
         <scene sceneID="SC0-dD-dNl">
             <objects>
-                <viewController storyboardIdentifier="SampleArticleList" title="記事一覧" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yJQ-gc-49y" customClass="SampleArticleListViewController" customModule="intern_homework" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SampleArticleList" title="記事一覧" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yJQ-gc-49y" customClass="SampleArticleListViewController" customModule="intern_2week_study" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZpX-le-3SW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,10 +19,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dov-Yh-1qW">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="yJQ-gc-49y" id="8dE-b0-OMn"/>
-                                    <outlet property="delegate" destination="yJQ-gc-49y" id="86G-VB-SD0"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -35,7 +31,7 @@
                         <viewLayoutGuide key="safeArea" id="mgD-37-dhp"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="Dov-Yh-1qW" id="Wab-J8-DZM"/>
+                        <outlet property="tableView" destination="Dov-Yh-1qW" id="nvG-ZQ-FRX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Pn-kf-L9V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
