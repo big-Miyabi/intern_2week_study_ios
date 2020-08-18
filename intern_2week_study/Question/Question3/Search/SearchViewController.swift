@@ -29,7 +29,6 @@ final class SearchViewController: UIViewController {
                 case .failure(let error):
                     let alert = UIAlertController.createErrorAlert(error)
                     self?.present(alert, animated: true)
-                    
                 }
                 self?.searchButton.isEnabled = true
             }
