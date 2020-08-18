@@ -3,7 +3,11 @@ import UIKit
 
 final class ArticleListViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.register(R.nib.articleListCell)
+        }
+    }
     
     private var articles: [Article] = []
 
@@ -11,10 +15,6 @@ final class ArticleListViewController: UIViewController {
         guard let articleListViewController = R.storyboard.articleList.instantiateInitialViewController() else { return ArticleListViewController() }
         articleListViewController.articles = articles
         return articleListViewController
-    }
-
-    override func viewDidLoad() {
-        tableView.register(R.nib.articleListCell)
     }
 }
 
