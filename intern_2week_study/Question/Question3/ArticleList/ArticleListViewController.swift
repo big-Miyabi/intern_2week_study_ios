@@ -28,10 +28,8 @@ extension ArticleListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.articleListCell, for: indexPath),
             let article = articles[safe: indexPath.row] else { return UITableViewCell() }
-        
         cell.set(article)
         return cell
     }

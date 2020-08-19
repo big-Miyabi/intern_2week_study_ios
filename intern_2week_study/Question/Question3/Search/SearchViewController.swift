@@ -36,7 +36,6 @@ final class SearchViewController: UIViewController {
     private func searchArticles() {
         // 多重タップ防止
         searchButton.isEnabled = false
-        
         guard let text = textField.text, !text.isEmpty else { return }
         
         APIClient.fetchArticles(keyword: text) { [weak self] result in
