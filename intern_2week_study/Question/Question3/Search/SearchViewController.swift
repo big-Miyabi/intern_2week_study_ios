@@ -12,12 +12,12 @@ final class SearchViewController: UIViewController {
     }
     
     @objc func darken(_ sender: UIButton) {
-        searchButton.backgroundColor = UIColor.hex(string: "#009500", alpha: 1)
+        searchButton.backgroundColor = UIColor(hex: "#009500")
     }
     
     @objc func lightenAndSearch(_ sender: UIButton) {
-        searchButton.backgroundColor = UIColor.hex(string: "#00C700", alpha: 1)
-        textField.layer.borderColor = UIColor.hex(string: "#FFDED5", alpha: 1).cgColor
+        searchButton.backgroundColor = UIColor(hex: "#00C700")
+        textField.layer.borderColor = UIColor(hex: "#FFDED5").cgColor
         searchArticles()
     }
     
