@@ -20,7 +20,7 @@ final class SearchViewController: UIViewController {
         searchArticles()
     }
     
-    final func beautifySearchButton() {
+    final private func beautifySearchButton() {
         searchButton.layer.cornerRadius = 15.0
         searchButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         searchButton.layer.shadowColor = UIColor(red: 65 / 255, green: 73 / 255, blue: 59 / 255, alpha: 1).cgColor
