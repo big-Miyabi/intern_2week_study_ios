@@ -24,6 +24,7 @@ final class SearchViewController: UIViewController {
     
     @objc func lightenAndSearch(_ sender: UIButton) {
         searchButton.backgroundColor = UIColor.hex(string: Const.lightGreen, alpha: 1)
+        textField.layer.borderColor = UIColor.hex(string: Const.albescentOrange, alpha: 1).cgColor
         searchArticles()
     }
     
