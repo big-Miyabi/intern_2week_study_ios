@@ -21,7 +21,7 @@ final class SearchViewController: UIViewController {
         searchArticles()
     }
     
-    final private func beautifyUI() {
+    private func setupButtonStyle() {
         searchButton.layer.cornerRadius = 15.0
         searchButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         searchButton.layer.shadowColor = UIColor.hex(string: "#3B4738", alpha: 1).cgColor
@@ -31,7 +31,7 @@ final class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        beautifyUI()
+        setupButtonStyle()
     }
     
     private func searchArticles() {
