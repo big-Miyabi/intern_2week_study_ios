@@ -11,19 +11,25 @@ final class SearchViewController: UIViewController {
         }
     }
     
+    private struct Const {
+        static let lightGreen = "#00C700"
+        static let darkGreen = "#009500"
+        static let blackGreen = "#3B4738"
+    }
+    
     @objc func darken(_ sender: UIButton) {
-        searchButton.backgroundColor = UIColor(red: 63 / 255, green: 149 / 255, blue: 0.0, alpha: 1.0)
+        searchButton.backgroundColor = UIColor.hex(string: Const.darkGreen, alpha: 1)
     }
     
     @objc func lightenAndSearch(_ sender: UIButton) {
-        searchButton.backgroundColor = UIColor(red: 0, green: 201 / 255, blue: 0, alpha: 1.0)
+        searchButton.backgroundColor = UIColor.hex(string: Const.lightGreen, alpha: 1)
         searchArticles()
     }
     
     final private func beautifySearchButton() {
         searchButton.layer.cornerRadius = 15.0
         searchButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        searchButton.layer.shadowColor = UIColor(red: 65 / 255, green: 73 / 255, blue: 59 / 255, alpha: 1).cgColor
+        searchButton.layer.shadowColor = UIColor.hex(string: Const.blackGreen, alpha: 1).cgColor
         searchButton.layer.shadowOpacity = 0.7
         searchButton.layer.shadowRadius = 2
     }
