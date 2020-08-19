@@ -1,6 +1,6 @@
 import UIKit
 
-final class TextField: UITextField, UITextFieldDelegate {
+final class SearchTextField: UITextField, UITextFieldDelegate {
     
     private struct Const {
         static let albescentOrange = "#FFDED5"
