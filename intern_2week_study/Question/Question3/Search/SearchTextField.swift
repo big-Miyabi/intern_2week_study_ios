@@ -1,13 +1,14 @@
 import UIKit
 
-class SearchTextField: UITextField, UITextFieldDelegate {
-
+class SearchTextField: UITextField {
     override func awakeFromNib() {
         self.delegate = self
         self.layer.borderWidth = 1.5
         self.layer.borderColor = UIColor.hex(string: "#FFDED5", alpha: 1).cgColor
     }
-    
+}
+
+extension SearchTextField: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.layer.borderColor = UIColor.hex(string: "#FFA98D", alpha: 1).cgColor
     }
