@@ -1,8 +1,8 @@
 import UIKit
 
-final class SearchTextField: UITextField, UITextFieldDelegate {
+class SearchTextField: UITextField, UITextFieldDelegate {
+
     override func awakeFromNib() {
-        // 初期スタイル
         self.delegate = self
         self.layer.borderWidth = 1.5
         self.layer.borderColor = UIColor.hex(string: "#FFDED5", alpha: 1).cgColor

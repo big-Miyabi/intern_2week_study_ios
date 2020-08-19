@@ -21,17 +21,8 @@ final class SearchViewController: UIViewController {
         searchArticles()
     }
     
-    private func setupButtonStyle() {
-        searchButton.layer.cornerRadius = 15.0
-        searchButton.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        searchButton.layer.shadowColor = UIColor.hex(string: "#3B4738", alpha: 1).cgColor
-        searchButton.layer.shadowOpacity = 0.7
-        searchButton.layer.shadowRadius = 2
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupButtonStyle()
     }
     
     private func searchArticles() {
