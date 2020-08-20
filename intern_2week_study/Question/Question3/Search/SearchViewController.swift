@@ -1,31 +1,15 @@
 import UIKit
 
-final class SearchViewController: UIViewController {
+class SearchViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var searchButton: UIButton! {
-        didSet {
-            searchButton.addTarget(self, action: #selector(darken(_:)), for: .touchDown)
-            searchButton.addTarget(self, action: #selector(lightenAndSearch(_:)), for: .touchUpInside)
-            searchButton.addTarget(self, action: #selector(lightenAndSearch(_:)), for: .touchUpOutside)
-        }
-    }
-    
-    @objc func darken(_ sender: UIButton) {
-        searchButton.backgroundColor = UIColor(hex: "#009500")
-    }
-    
-    @objc func lightenAndSearch(_ sender: UIButton) {
-        searchButton.backgroundColor = UIColor(hex: "#00C700")
-        textField.layer.borderColor = UIColor(hex: "#FFDED5").cgColor
-        searchArticles()
-    }
+    @IBOutlet weak var searchButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    private func searchArticles() {
+    func searchArticles() {
         // 多重タップ防止
         searchButton.isEnabled = false
         guard let text = textField.text, !text.isEmpty else { return }

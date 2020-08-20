@@ -6,6 +6,10 @@ class SearchTextField: UITextField {
         self.layer.borderWidth = 1.5
         self.layer.borderColor = UIColor(hex: "#FFDED5").cgColor
     }
+    
+    func lighten() {
+        self.layer.borderColor = UIColor(hex: "#FFDED5").cgColor
+    }
 }
 
 extension SearchTextField: UITextFieldDelegate {
