@@ -1,22 +1,17 @@
 import UIKit
 
-final class SearchViewController: UIViewController {
+class SearchViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
-    
-    @IBAction func searchButtonTapped(_ sender: UIButton) {
-        searchArticles()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    private func searchArticles() {
+    func searchArticles() {
         // 多重タップ防止
         searchButton.isEnabled = false
-        
         guard let text = textField.text, !text.isEmpty else { return }
         
         APIClient.fetchArticles(keyword: text) { [weak self] result in

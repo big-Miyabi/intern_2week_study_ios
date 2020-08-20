@@ -37,6 +37,9 @@
 		08C9DD8F24E0162200459724 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08C9DD8E24E0162200459724 /* Search.storyboard */; };
 		08C9DD9124E0163E00459724 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C9DD9024E0163E00459724 /* SearchViewController.swift */; };
 		08EF05C524C37A6600129792 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FD71524C34D2300383122 /* Rswift.framework */; };
+		292BFFD424ECF14C00A6703F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BFFD324ECF14C00A6703F /* UIColor+Extensions.swift */; };
+		292BFFD624ED07E800A6703F /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BFFD524ED07E800A6703F /* SearchTextField.swift */; };
+		292BFFD824ED567E00A6703F /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292BFFD724ED567E00A6703F /* SearchButton.swift */; };
 		29B91DEB24E907D30095E27D /* ArticleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29B91DEA24E907D30095E27D /* ArticleList.storyboard */; };
 		29B91DED24E909E80095E27D /* ArticleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29B91DEC24E909E80095E27D /* ArticleListCell.xib */; };
 		29B91DEF24E915A60095E27D /* ArticleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B91DEE24E915A60095E27D /* ArticleListCell.swift */; };
@@ -77,10 +80,14 @@
 		08C9DD8824DF0CBE00459724 /* Question2Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Question2Cell.xib; sourceTree = "<group>"; };
 		08C9DD8E24E0162200459724 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		08C9DD9024E0163E00459724 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		292BFFD324ECF14C00A6703F /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		292BFFD524ED07E800A6703F /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		292BFFD724ED567E00A6703F /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		29B91DEA24E907D30095E27D /* ArticleList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleList.storyboard; sourceTree = "<group>"; };
 		29B91DEC24E909E80095E27D /* ArticleListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleListCell.xib; sourceTree = "<group>"; };
 		29B91DEE24E915A60095E27D /* ArticleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListCell.swift; sourceTree = "<group>"; };
 		29B91DF424E91E040095E27D /* ArticleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
+		29D0510924E9781000A22B75 /* HigashiOme-Gothic-1.3i.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HigashiOme-Gothic-1.3i.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +218,7 @@
 			children = (
 				088E557924D669AF00A2FE3E /* Array+Extensions.swift */,
 				086F846424D997A00084571E /* UIAlertController+Extensions.swift */,
+				292BFFD324ECF14C00A6703F /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,8 +282,11 @@
 		08C9DD9224E016E600459724 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				29D0510924E9781000A22B75 /* HigashiOme-Gothic-1.3i.ttf */,
 				08C9DD8E24E0162200459724 /* Search.storyboard */,
 				08C9DD9024E0163E00459724 /* SearchViewController.swift */,
+				292BFFD524ED07E800A6703F /* SearchTextField.swift */,
+				292BFFD724ED567E00A6703F /* SearchButton.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -439,14 +450,17 @@
 				083268AA24DEE784007B6A7A /* Question1ViewController.swift in Sources */,
 				0848136024DD7AA600BF590E /* QuestionListViewController.swift in Sources */,
 				29B91DF524E91E040095E27D /* ArticleListViewController.swift in Sources */,
+				292BFFD624ED07E800A6703F /* SearchTextField.swift in Sources */,
 				0841933724D9505800BFCBD3 /* Logger.swift in Sources */,
 				088E557A24D669AF00A2FE3E /* Array+Extensions.swift in Sources */,
 				08C9DD9124E0163E00459724 /* SearchViewController.swift in Sources */,
+				292BFFD824ED567E00A6703F /* SearchButton.swift in Sources */,
 				08C9DD8024DEF30800459724 /* QuestionListCell.swift in Sources */,
 				083FD70024C33D2900383122 /* AppDelegate.swift in Sources */,
 				08C9DD8624DF0A8E00459724 /* Question2ViewController.swift in Sources */,
 				088E557524D660B700A2FE3E /* SampleArticleListCell.swift in Sources */,
 				082CF76B24D5D526001F7680 /* APIClient.swift in Sources */,
+				292BFFD424ECF14C00A6703F /* UIColor+Extensions.swift in Sources */,
 				082CF76324D59281001F7680 /* R.generated.swift in Sources */,
 				082CF76524D5A5B9001F7680 /* SampleArticleListViewController.swift in Sources */,
 				08C5FE2624CD7A8B007100CA /* Article.swift in Sources */,
@@ -592,8 +606,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GRG84YP2QU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -604,7 +619,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "caraquri.Intern-2week-study";
+				PRODUCT_BUNDLE_IDENTIFIER = "caraquri.Intern-2week-study20200817";
 				PRODUCT_NAME = intern_2week_study;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -616,8 +631,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GRG84YP2QU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -628,7 +644,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "caraquri.Intern-2week-study";
+				PRODUCT_BUNDLE_IDENTIFIER = "caraquri.Intern-2week-study20200817";
 				PRODUCT_NAME = intern_2week_study;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

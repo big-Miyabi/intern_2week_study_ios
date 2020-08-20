@@ -7,53 +7,59 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HigashiOme-Gothic-1.3i.ttf">
+            <string>HigashiOme-Gothic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Search View Controller-->
         <scene sceneID="VwI-RL-Lms">
             <objects>
                 <viewController storyboardIdentifier="Search" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hE7-Bk-rHS" customClass="SearchViewController" customModule="intern_2week_study" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xlp-gX-m4Q">
+                    <view key="view" contentMode="scaleToFill" id="xlp-gX-m4Q" userLabel="Parent View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Noq-Vn-onO">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Noq-Vn-onO" userLabel="Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="627"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwB-7m-Iya">
-                                        <rect key="frame" x="87" y="261" width="240" height="105"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwB-7m-Iya" userLabel="Wrap View">
+                                        <rect key="frame" x="79" y="261" width="256" height="105"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キーワードを入力して検索" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cwo-aH-RDr">
-                                                <rect key="frame" x="20" y="0.0" width="200" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キーワードを入力して検索" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cwo-aH-RDr" customClass="SearchTextField" customModule="intern_2week_study" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3V-0W-iXI">
-                                                <rect key="frame" x="104.5" y="75" width="31" height="30"/>
-                                                <state key="normal" title="検索"/>
-                                                <connections>
-                                                    <action selector="searchButtonTapped:" destination="hE7-Bk-rHS" eventType="touchUpInside" id="u2c-cK-r2x"/>
-                                                </connections>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3V-0W-iXI" customClass="SearchButton" customModule="intern_2week_study" customModuleProvider="target">
+                                                <rect key="frame" x="49" y="72" width="158" height="33"/>
+                                                <color key="backgroundColor" red="0.0" green="0.78823529410000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="HigashiOme-Gothic" family="東青梅ゴシック" pointSize="17"/>
+                                                <state key="normal" title="検索">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="cwo-aH-RDr" firstAttribute="top" secondItem="uwB-7m-Iya" secondAttribute="top" id="7pQ-Ed-LtO"/>
                                             <constraint firstAttribute="height" constant="105" id="JlS-3g-vuV"/>
-                                            <constraint firstAttribute="width" constant="240" id="cY1-k6-BaX"/>
+                                            <constraint firstItem="D3V-0W-iXI" firstAttribute="width" secondItem="cwo-aH-RDr" secondAttribute="width" multiplier="0.618" id="Y17-Z8-iGp"/>
+                                            <constraint firstItem="cwo-aH-RDr" firstAttribute="width" secondItem="uwB-7m-Iya" secondAttribute="width" id="cbf-Yd-bQ0"/>
                                             <constraint firstItem="cwo-aH-RDr" firstAttribute="centerX" secondItem="uwB-7m-Iya" secondAttribute="centerX" id="dFq-Hb-kN8"/>
                                             <constraint firstAttribute="bottom" secondItem="D3V-0W-iXI" secondAttribute="bottom" id="hCT-e3-EMZ"/>
                                             <constraint firstItem="D3V-0W-iXI" firstAttribute="centerX" secondItem="uwB-7m-Iya" secondAttribute="centerX" id="opo-gA-WgQ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="uwB-7m-Iya" firstAttribute="width" secondItem="Noq-Vn-onO" secondAttribute="width" multiplier="0.618" id="SKx-sh-jSa"/>
                                     <constraint firstItem="uwB-7m-Iya" firstAttribute="centerY" secondItem="Noq-Vn-onO" secondAttribute="centerY" id="Ts9-wD-Mrt"/>
                                     <constraint firstItem="uwB-7m-Iya" firstAttribute="centerX" secondItem="Noq-Vn-onO" secondAttribute="centerX" id="qeP-RP-tb8"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.98060351609999996" green="0.99199587109999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Noq-Vn-onO" firstAttribute="centerX" secondItem="xlp-gX-m4Q" secondAttribute="centerX" id="FcL-V8-u6f"/>
                             <constraint firstItem="Noq-Vn-onO" firstAttribute="top" secondItem="xlp-gX-m4Q" secondAttribute="top" id="Zik-sa-oKl"/>
